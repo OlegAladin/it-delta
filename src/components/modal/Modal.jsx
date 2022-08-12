@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import s from './modal.module.scss';
+import close from './../../images/close.svg';
 
 const Modal = (props) => {
     const [photoData, setPhotoData] = useState();
@@ -32,6 +33,9 @@ const Modal = (props) => {
             {
                 photoData !== undefined &&
                 <div onClick={(e) => { e.stopPropagation() }} className={s.modalBlock}>
+                    <div className={s.closeBtn}>
+                        <img onClick={onClose} src={close} alt="close" />
+                    </div>
                     <div className={s.photo}>
                         <img src={photoData.url} alt={photoData.id} />
                     </div>

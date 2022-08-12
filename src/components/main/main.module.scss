@@ -1,9 +1,9 @@
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 244px;
+    grid-template-rows: 244px 244px;
     gap: 32px;
-    padding-top: 46px;
+    padding: 46px 15px 0;
 
     .photo {
         position: relative;
@@ -31,5 +31,19 @@
                 width: 110%;
             }
         }
+    }
+}
+
+@media (max-width: 700px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 244px 244px 244px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 244px);
     }
 }

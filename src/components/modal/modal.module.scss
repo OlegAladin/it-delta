@@ -20,82 +20,149 @@
             0px 10px 10px -5px rgba(0, 0, 0, 0.04);
         background-color: #ffffff;
         overflow: auto;
-    }
 
-    .photo {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100%;
-        margin-bottom: 24px;
-        border-radius: 24px;
-
-        img {
-            width: 405px;
-            height: 405px;
-            border-radius: 24px;
-            box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
-            object-fit: cover;
-            background-image: url('./../../images/loader.gif');
-            background-repeat: no-repeat;
-            background-position: 50%;
+        .closeBtn {
+            display: none;
         }
-    }
 
-    .comments {
-        width: 100%;
-        margin-bottom: 24px;
-
-        span {
-            display: inline-block;
+        .photo {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
             width: 100%;
-            margin: 10px;
-        }
-    }
+            margin-bottom: 24px;
+            border-radius: 24px;
 
-    .myComment {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 24px;
-
-        span {
-            margin-bottom: 4px;
-        }
-
-        textarea {
-            width: 100% !important;
-            height: 105px;
-            padding: 10px;
-            margin-bottom: 8px;
-            border: 1px solid #D1D5DB;
-            border-radius: 6px;
+            img {
+                max-width: 405px;
+                height: 405px;
+                border-radius: 24px;
+                box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+                object-fit: cover;
+                background-image: url('./../../images/loader.gif');
+                background-repeat: no-repeat;
+                background-position: 50%;
+            }
         }
 
-        p {
-            color: #6B7280;
+        .comments {
+            width: 100%;
+            margin-bottom: 24px;
+
+            span {
+                display: inline-block;
+                width: 100%;
+                margin: 10px;
+            }
         }
-    }
 
-    .postComment {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        .myComment {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
 
-        button {
-            padding: 9px 17px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            background-color: #4F46E5;
-            color: #ffffff;
-            transition: 0.3s;
-
-            &:hover {
-                background-color: #433cc3;
+            span {
+                margin-bottom: 4px;
             }
 
-            &:active {
-                background-color: #2f2a8d;
+            textarea {
+                width: 100% !important;
+                height: 105px;
+                padding: 10px;
+                margin-bottom: 8px;
+                border: 1px solid #D1D5DB;
+                border-radius: 6px;
+            }
+
+            p {
+                color: #6B7280;
+            }
+        }
+
+        .postComment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            button {
+                padding: 9px 17px;
+                margin-bottom: 10px;
+                border-radius: 6px;
+                background-color: #4F46E5;
+                color: #ffffff;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #433cc3;
+                }
+
+                &:active {
+                    background-color: #2f2a8d;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1280px) {
+    .modal {
+        &Block {
+            height: 80%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .modal {
+        &Block {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+
+            .closeBtn {
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                display: block;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                &:hover {
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .modal {
+        &Block {
+            padding: 64px 24px 24px 24px;
+
+            .photo {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 312px) {
+    .modal {
+        &Block {
+            padding: 70px 24px 24px 24px;
+
+            .photo {
+                img {
+                    height: 205px;
+                }
             }
         }
     }
